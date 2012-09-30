@@ -113,6 +113,7 @@ tbody{
     tr{
         border-top: 1px solid #FFF;
         border-bottom: 1px solid #E6E6E6;
+        border-left: 3px solid #CCC;
         background: #F2F2F2;
         &:hover{
             background: #E2E2E2;
@@ -159,11 +160,33 @@ tbody{
     float: left;
     width: 15%;
     min-width: 100px;
+    padding-right: 20px;
     a{
         display: block;
-        line-height: 45px;
-        height: 45px;
+        text-decoration: none;
+        padding: 41px 0 5px 10%;
+        border-bottom: 1px solid #F2F2F2;
+        @include single-transition(all, .3s, ease-in-out);
     }
+    li{
+        position: relative;
+        &.active{
+            a{
+                color: #2BA6CB;
+            }
+            .complete{
+                color: #FFB56E;
+            }
+        }
+    }
+}
+.complete{
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    font-size: .8em;
+    color: #C2C2C2;
+    pointer-events: none;
 }
 
 .tab-content{
@@ -335,3 +358,69 @@ tbody{
 	        transition: none;
 }
 
+
+
+
+/* =============================================================================
+    ANIMATE CSS
+  ========================================================================== */
+
+
+@-webkit-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+
+@-o-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-o-transform: translateX(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+}
+
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.fadeInLeft {
+	-webkit-animation: fadeInLeft .5s ease;
+	   -moz-animation: fadeInLeft .3s ease-in-out;
+	     -o-animation: fadeInLeft .3s ease-in-out;
+	        animation: fadeInLeft .3s ease-in-out;
+	-webkit-animation-fill-mode: both;
+		   -moz-animation-fill-mode: both;
+		     -o-animation-fill-mode: both;
+		        animation-fill-mode: both;
+}

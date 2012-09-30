@@ -29,58 +29,70 @@
 	<div role="main" class="main">
 		<nav class="tab-nav">
 		    <ul>
-		        <li class="active"><a href="#pm" data-toggle="tab">PM</a></li>
-		        <li><a href="#front" data-toggle="tab">Front-End</a></li>
-                <li><a href="#" data-toggle="tab">Back-End</a></li>
+		        <li class="active">
+		            <a href="#pm" data-toggle="tab">PM</a>
+		            <span class="complete">55%</span>
+		        </li>
+		        <li>
+		            <a href="#front" data-toggle="tab">Front-End</a>
+		            <span class="complete">22%</span>
+		        </li>
+                <li>
+                    <a href="#back" data-toggle="tab">Back-End</a>
+                    <span class="complete">10%</span>
+                </li>
 		    </ul>
 		</nav>
 		<div class="tab-content">
-            <div class="tab-pane active" id="pm">
-                <p>PM komt hier</p>
-            </div>
-    		<div class="tab-pane" id="front">
-        		<ul class="checkbox_list">
-        		    <li>
-        		        <input type="checkbox" name="resize" id="resize" />
-        		        <label for="resize">Does the site render correctly when resizing?</label>
-        		    </li>
-        		    <li>
-        		        <input type="checkbox" name="error_p" id="error_p" checked />
-        		        <label for="error_p">Are useful 404, 503 and 500 pages created?</label>
-        		    </li>
-        		    <li>
-        		        <input type="checkbox" name="large_res" id="large_res" />
-        		        <label for="large_res">Tested at larger resolutions?</label>
-        		    </li>
-        		    <li>
-        		        <input type="checkbox" name="min_res" id="min_res" />
-        		        <label for="min_res">Tested at 1024x768 resolution?</label>
-        		    </li>
-        		    <li>
-        		        <input type="checkbox" name="chrome" id="chrome" />
-        		        <label for="chrome">Displays & functions correctly in Chrome (Mac & PC)?</label>
-        		    </li>
-        		    <li>
+            <div class="tab-pane fadeInLeft active" id="pm">
+                <ul class="checkbox_list">
+                    <li>
+                        <input type="checkbox" name="resize" id="resize" />
+                        <label for="resize">Does the site render correctly when resizing?</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="error_p" id="error_p" checked />
+                        <label for="error_p">Are useful 404, 503 and 500 pages created?</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="large_res" id="large_res" />
+                        <label for="large_res">Tested at larger resolutions?</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="min_res" id="min_res" />
+                        <label for="min_res">Tested at 1024x768 resolution?</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="chrome" id="chrome" />
+                        <label for="chrome">Displays & functions correctly in Chrome (Mac & PC)?</label>
+                    </li>
+                    <li>
                         <input type="checkbox" name="firefox" id="firefox" />
-        		        <label for="firefox">Displays & functions correctly in FireFox (Mac & PC)?</label>
-        		    </li>
-        		    <li>
-        		        <input type="checkbox" name="safari" id="safari" />
-        		        <label for="safari">Displays & functions correctly in Safari (Mac & PC)?</label>
-        		    </li>
-        		    <li>
-        		        <input type="checkbox" name="IE7" id="IE7" />
-        		        <label for="IE7">Displays & functions correctly in IE7?</label>
-        		    </li>
-        		    <li>
-        		        <input type="checkbox" name="IE8" id="IE8" />
-        		        <label for="IE8">Displays & functions correctly in IE8?</label>
-        		    </li>
-        		    <li>
-        		        <input type="checkbox" name="IE9" id="IE9" />
-        		        <label for="IE9">Displays & functions correctly in IE9?</label>
-        		    </li>
-        		</ul>
+                        <label for="firefox">Displays & functions correctly in FireFox (Mac & PC)?</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="safari" id="safari" />
+                        <label for="safari">Displays & functions correctly in Safari (Mac & PC)?</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="IE7" id="IE7" />
+                        <label for="IE7">Displays & functions correctly in IE7?</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="IE8" id="IE8" />
+                        <label for="IE8">Displays & functions correctly in IE8?</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="IE9" id="IE9" />
+                        <label for="IE9">Displays & functions correctly in IE9?</label>
+                    </li>
+                </ul>
+            </div>
+    		<div class="tab-pane fadeInLeft" id="front">
+        		Front-End list
+        	</div>
+        	<div class="tab-pane fadeInLeft" id="back">
+        	    Back-End list
         	</div>
         </div>
 	</div>
