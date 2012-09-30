@@ -20,54 +20,69 @@
 	<header>
 	    <h1>Telenet Shakers</h1>
 	    <div class="right">
+	        <a href="#" class="details">Project Details</a>
 	        <a href="#" class="settings btn" id="settings">Project Settings</a>
 	    </div>
 	</header>
 	
 	
 	<div role="main" class="main">
-		<ul class="checkbox_list">
-		    <li>
-		        <input type="checkbox" name="resize" id="resize" />
-		        <label for="resize">Does the site render correctly when resizing?</label>
-		    </li>
-		    <li>
-		        <input type="checkbox" name="error_p" id="error_p" />
-		        <label for="error_p">Are useful 404, 503 and 500 pages created?</label>
-		    </li>
-		    <li>
-		        <input type="checkbox" name="large_res" id="large_res" />
-		        <label for="large_res">Tested at larger resolutions?</label>
-		    </li>
-		    <li>
-		        <input type="checkbox" name="min_res" id="min_res" />
-		        <label for="min_res">Tested at 1024x768 resolution?</label>
-		    </li>
-		    <li>
-		        <input type="checkbox" name="chrome" id="chrome" />
-		        <label for="chrome">Displays & functions correctly in Chrome (Mac & PC)?</label>
-		    </li>
-		    <li>
-                <input type="checkbox" name="firefox" id="firefox" />
-		        <label for="firefox">Displays & functions correctly in FireFox (Mac & PC)?</label>
-		    </li>
-		    <li>
-		        <input type="checkbox" name="safari" id="safari" />
-		        <label for="safari">Displays & functions correctly in Safari (Mac & PC)?</label>
-		    </li>
-		    <li>
-		        <input type="checkbox" name="IE7" id="IE7" />
-		        <label for="IE7">Displays & functions correctly in IE7?</label>
-		    </li>
-		    <li>
-		        <input type="checkbox" name="IE8" id="IE8" />
-		        <label for="IE8">Displays & functions correctly in IE8?</label>
-		    </li>
-		    <li>
-		        <input type="checkbox" name="IE9" id="IE9" />
-		        <label for="IE9">Displays & functions correctly in IE9?</label>
-		    </li>
-		</ul>
+		<nav class="tab-nav">
+		    <ul>
+		        <li class="active"><a href="#pm" data-toggle="tab">PM</a></li>
+		        <li><a href="#front" data-toggle="tab">Front-End</a></li>
+                <li><a href="#" data-toggle="tab">Back-End</a></li>
+		    </ul>
+		</nav>
+		<div class="tab-content">
+            <div class="tab-pane active" id="pm">
+                <p>PM komt hier</p>
+            </div>
+    		<div class="tab-pane" id="front">
+        		<ul class="checkbox_list">
+        		    <li>
+        		        <input type="checkbox" name="resize" id="resize" />
+        		        <label for="resize">Does the site render correctly when resizing?</label>
+        		    </li>
+        		    <li>
+        		        <input type="checkbox" name="error_p" id="error_p" checked />
+        		        <label for="error_p">Are useful 404, 503 and 500 pages created?</label>
+        		    </li>
+        		    <li>
+        		        <input type="checkbox" name="large_res" id="large_res" />
+        		        <label for="large_res">Tested at larger resolutions?</label>
+        		    </li>
+        		    <li>
+        		        <input type="checkbox" name="min_res" id="min_res" />
+        		        <label for="min_res">Tested at 1024x768 resolution?</label>
+        		    </li>
+        		    <li>
+        		        <input type="checkbox" name="chrome" id="chrome" />
+        		        <label for="chrome">Displays & functions correctly in Chrome (Mac & PC)?</label>
+        		    </li>
+        		    <li>
+                        <input type="checkbox" name="firefox" id="firefox" />
+        		        <label for="firefox">Displays & functions correctly in FireFox (Mac & PC)?</label>
+        		    </li>
+        		    <li>
+        		        <input type="checkbox" name="safari" id="safari" />
+        		        <label for="safari">Displays & functions correctly in Safari (Mac & PC)?</label>
+        		    </li>
+        		    <li>
+        		        <input type="checkbox" name="IE7" id="IE7" />
+        		        <label for="IE7">Displays & functions correctly in IE7?</label>
+        		    </li>
+        		    <li>
+        		        <input type="checkbox" name="IE8" id="IE8" />
+        		        <label for="IE8">Displays & functions correctly in IE8?</label>
+        		    </li>
+        		    <li>
+        		        <input type="checkbox" name="IE9" id="IE9" />
+        		        <label for="IE9">Displays & functions correctly in IE9?</label>
+        		    </li>
+        		</ul>
+        	</div>
+        </div>
 	</div>
 	
 	
@@ -86,14 +101,15 @@
 	<div class="avgrund-popup stack" id="settings-popup">
 	    <header>Project Settings</header>
 	    <div class="main">
-    	    <ul>
+	        <h2>Browser support</h2>
+    	    <ul class="checkbox_list">
     	        <li>
-    	            <label for="ie7">IE7</label>
     	            <input type="checkbox" name="ie7" id="ie7" />
+    	            <label for="ie7">IE7</label>
     	        </li>
     	        <li>
+    	            <input type="checkbox" name="ie8" id="ie8" checked />
     	            <label for="ie8">IE8</label>
-    	            <input type="checkbox" name="ie8" id="ie8" />
     	        </li>
     	    </ul>
     	</div>
@@ -107,6 +123,7 @@
 	
 	<!-- Optionals -->
 	<script src="js/libs/avgrund.js"></script>
+	<script src="js/libs/bootstrap-tab.js"></script>
 	
 	<!-- Script -->
 	<script src="js/script.js"></script>

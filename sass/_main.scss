@@ -37,7 +37,7 @@ ul{
 header{
     background: #111;
     border-bottom: 1px solid #000;
-    color: #FFF;
+    color: #F9F9F9;
     height: 45px;
     line-height: 45px;
     overflow: hidden;
@@ -48,8 +48,31 @@ header{
         font-weight: 300;
         float: left;
     }
+    a{
+        @include single-transition(all, .3s, ease-in-out);
+        &:not(.btn){
+            display: inline-block;
+            padding: 0 10px;
+            color: #6F6F6F;
+            font-size: .85em;
+            border-left: 1px solid #333;
+            text-decoration: none;
+            &:hover{
+                background: #000;
+                color: #9F9F9F;
+            }
+       }
+       &:first-child{
+           border-left: none;
+       }
+    }
+    .btn{
+        font-size: .95em;
+    }
 }
-
+.settings{
+    margin-left: 10px;
+}
 
 
 /* =============================================================================
@@ -103,6 +126,7 @@ tbody{
   ========================================================================== */
 
 .checkbox_list{
+    text-shadow: 0 1px 1px rgba(255, 255, 255, .8);
     input{
         display: none;
     }
@@ -127,10 +151,32 @@ tbody{
 
 
 
+/* =============================================================================
+  Tabs
+  ========================================================================== */
 
+.tab-nav{
+    float: left;
+    width: 15%;
+    min-width: 100px;
+    a{
+        display: block;
+        line-height: 45px;
+        height: 45px;
+    }
+}
 
+.tab-content{
+    overflow: hidden;
+}
 
+.tab-content > .tab-pane{
+  display: none;
+}
 
+.tab-content > .active{
+  display: block;
+}
 
 
 
@@ -231,7 +277,12 @@ tbody{
 	    border-bottom: 1px solid #2797B9;
 	}
 	.main{
-	    padding-top: 15px;
+	    padding: 0 15px 15px;
+	}
+	h2{
+	    font-size: 1em;
+	    line-height: 150%;
+	    margin: 10px 0 5px;
 	}
 }
 	.avgrund-active .avgrund-popup-animate {
